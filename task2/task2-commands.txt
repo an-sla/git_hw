@@ -1,0 +1,62 @@
+TASK2 — COMMANDS:
+
+asciinema rec basic-staging.cast
+
+nano file.txt
+
+1. initial file.txt contents 
+
+echo 2 > file.txt
+
+git diff
+
+git diff --staged
+
+Why is this blank? → git diff is blank because file.txt and its initial state was not added at all and git diff cannot reflect the changes between the working directory and its previous state; git diff --staged is blank because we have not added anything and therefore the difference between the working directory and the staged area cannot be reflected.
+
+git add file.txt
+
+git diff → tells us nothing because we have not changed the working directory compared to the new staging area
+
+git diff --staged → shows the change to file.txt as it has arrived in the staging area (we have changed its contents to "2", replacing its previous contents through the ">" echo command in bash).
+
+echo 3 > file.txt
+
+git diff
+
+git diff --staged  
+
+Explain what is happening? → git diff shows us "-2 +3" because we have changed the file.txt state between the working area (3) and its previous staged-area state (2); git diff --staged shows us just "+2" because we have not added the newest change ("3") to the staged area.
+
+git status → file.txt is present twice — as a new added file in the staging area and as a modified file in the working directory
+
+git reset HEAD file.txt
+
+git status → we have reset the head commit status to the current working-directory status ("3")
+
+stage change with:
+git add file.txt
+ 
+make commit with:
+git commit -m "contents — 3" 
+
+git log → added a new commit (file.txt contains "3")
+
+echo 4 > file.txt
+
+nano file.txt
+
+What is the content of file.txt? → "4"
+
+git status
+What does git status tell us? → we have 2 versions of file.txt again, one in the committed-repository area ("3", not shown) and one is unsaved (red) in the working directory ("4").
+
+git checkout file.txt
+
+nano file.txt
+
+What is the content of file.txt? → "3", we have removed the working-directory version of file.txt ("4") and replaced it with the historic repository version ("3").
+
+git status → we only have the staging-area version of file.txt
+
+exit
