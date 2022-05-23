@@ -1,0 +1,37 @@
+TASK14 — COMMANDS:
+
+asciinema rec squashing.cast
+
+source setup.sh
+
+git log --oneline --graph
+
+→ Want to keep "initial file" commit, because it not connected to file.txt.
+→ Want to squash the next 5 commits into 1.
+
+git rebase -i fac01ff
+→ Change instructions to "squash" and reword the first commit message, remove all other messages.
+
+git log --oneline --graph
+
+git show 846ffdb (last commit)
+
+sed -i '' '/^$/d' file.txt
+
+nano file.txt
+
+git add file.txt
+
+git commit --amend
+
+git log -p
+
+exit
+
+Good commit message:
+
+Squash 5 commits into one
+
+Clean up history of file.txt to improve orientation between commits.
+
+
