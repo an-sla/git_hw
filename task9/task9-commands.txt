@@ -1,0 +1,33 @@
+TASK9 — COMMANDS:
+
+asciinema rec basic-revert.cast
+
+source setup.sh
+
+git log --decorate --oneline
+
+cat greeting.txt
+
+git revert c9e62bb
+
+git log --decorate --oneline
+→ the revert command added a new commit, rather than removing the original commit.
+
+cat greeting.txt → original contents restored.
+
+ls → we need to find the commit corresponding to the credentials.txt file.
+
+git log --decorate --oneline → it is commit "41920b1".
+
+git revert 41920b1
+
+git log --decorate --oneline
+
+ls
+→ How many commits were added or changed by the last revert? 1 commit was added to delete the credentials.txt file, but it is still being created in the initial commit number 41920b1.
+
+git show 41920b1 → file still in history.
+
+As you have now reverted the credentials file, so it is removed from your working directory, is it also removed from git? No, ref pointers are not moved to a state before the 41920b1 commit, but rather they are moved to a new state after the inverse-41920b1 commit introduced by revert.
+
+exit
