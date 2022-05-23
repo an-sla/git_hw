@@ -1,0 +1,47 @@
+TASK5 — COMMANDS:
+
+asciinema rec 3-way-merge.cast
+
+source setup.sh
+
+git branch greeting
+
+git checkout greeting
+
+git branch → shows 2 branches
+
+nano greeting.txt
+"Hello world!"
+save file and exit
+
+git add greeting.txt
+
+git commit -m "Hello world! — greeting branch" greeting.txt
+
+git checkout main
+
+nano README.md
+"Practice README file"
+save file and exit
+
+cat greeting.txt
+
+git add README.md
+
+git commit -m "new README" README.md
+
+git log --oneline --graph --all → can see 2 new changes: greeting.txt and README.md.
+
+git diff main..greeting
+
+git merge greeting
+
+git log --oneline --graph --all → created extra commit denoting the merge.
+
+ls
+
+git branch -d greeting
+
+git branch
+
+exit
