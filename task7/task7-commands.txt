@@ -1,0 +1,18 @@
+TASK7 — COMMANDS:
+
+asciinema rec merge-mergesort.cast
+
+source setup.sh
+
+git branch
+
+git log --oneline --graph --all
+
+git merge -Xtheirs Mergesort-Impl
+→ or we can use: git checkout --theirs mergesort.py
+
+git log --oneline --graph --all
+
+git branch -d Mergesort-Impl
+
+exit
