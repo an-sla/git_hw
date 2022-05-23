@@ -1,0 +1,30 @@
+TASK6 — COMMANDS:
+
+asciinema rec merge-conflict.cast
+
+source setup.sh
+
+git branch → reviewing changes, making sure we are on main
+
+git status
+
+git merge merge-conflict-branch1 → Auto-merging task6/file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+git status → shows 'both added: file.txt'.
+
+grep -v -e'^<<<<<<<' -e '^>>>>>>>' -e'=======' file.txt > file.tmp
+mv file.tmp file.txt
+→ resolves merge conflict by creating a union of the content of the two files.
+
+cat file.txt
+
+git add file.txt
+
+git commit → save file.
+
+git log --oneline --graph
+
+git branch -d merge-conflict-branch1
+
+exit
