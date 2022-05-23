@@ -1,0 +1,52 @@
+TASK3 — COMMANDS:
+
+source setup.sh
+
+asciinema rec basic-branching.cast
+
+git branch → on "master"
+
+git branch mybranch
+
+git branch → 3 branches in total: master, second-branch, mybranch.
+
+git checkout mybranch
+
+git status
+
+git checkout main
+
+git status → no changes on either branch, they are the same, but the first line of git status changes to indicate current branch.
+
+ls on master
+ls on mybranch 
+→ contains the same files, because mybranch was created on the basis of master and no changes have been made to either (they are in the same state).
+
+echo "Anastasia" > file1.txt → in mybranch.
+
+git add file1.txt
+
+git commit -m "my_name file1" file1.txt
+
+git log --oneline --graph
+
+git checkout main
+
+git log --oneline --graph → file1 commit missing.
+
+echo "Alexa" > file2.txt → in master.
+
+git add file2.txt
+
+git commit -m "alexa-name file2" file2.txt
+
+git log --oneline --graph --all
+
+git checkout mybranch
+
+ls → cannot see file2.txt.
+
+git diff mybranch main
+
+exit
+
