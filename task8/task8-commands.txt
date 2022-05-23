@@ -1,0 +1,39 @@
+TASK8 — COMMANDS:
+
+asciinema rec rebase-branch.cast
+
+source setup.sh
+
+git branch
+
+git log --oneline --graph --all
+
+git checkout uppercase
+
+git log --oneline --graph --all
+→ How does the log compare? — HEAD is at uppercase in the second instance, two separate branches shown.
+
+git rebase main
+
+git log --oneline --graph --all
+→ What did just happen? — feature blobs placed after main blobs on main branch, one branch shown.
+
+cat greeting.txt → showing changes from the last blob which has been rebased on the uppercase branch only ("rebase is used on the feature branch whereas merge is performed of the main branch" → thus, while on feature, our HEAD is at "HELLO", uppercase).
+
+git checkout main
+
+git log --oneline --graph --all → HEAD in different place that when showing log from uppercase.
+
+cat greeting.txt → while on main after a rebase but before a merge, our HEAD is at previous state of "hello" (lowercase).
+
+git merge uppercase → merges HELLO (uppercase) into main without explicitly creating a merge commit, main HEAD is updated to HELLO (shown by next step).
+
+cat greeting.txt
+
+git log --oneline --graph --all → Now shows HEAD -> main, uppercase because the last blob has been connected with both main and uppercase.
+
+git branch -d uppercase
+
+git branch
+
+exit
