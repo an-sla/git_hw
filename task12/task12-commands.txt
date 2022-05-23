@@ -1,0 +1,26 @@
+TASK12 — COMMANDS:
+
+asciinema rec amend.cast
+
+source setup.sh
+
+git status .
+→ Shows bar.txt as not added (in working dir); foo.txt has already been committed.
+
+git log -p
+→ Shows that foo.txt has been committed with the message "feature 73".
+
+git add bar.txt
+
+git commit --amend
+→ Added bar to previous commit, changed commit message.
+
+git log -p
+→ Now shows the "feature 73" commit as "adding foo and bar" commit.
+
+git commit --amend
+→ We would now be able to edit the "adding foo and bar" commit; we ammend the message again to "Change of commit message — adding foo and bar 2."
+
+git log -p
+
+exit
