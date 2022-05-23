@@ -1,0 +1,29 @@
+TASK11 — COMMANDS:
+
+asciinema rec basic-cleaning.cast
+
+source setup.sh
+
+ls -R
+
+git clean -n → dry run, what would have been removed
+
+git add src/mylib.c
+
+git add basic-cleaning.cast → must add this for our recording of the terminal not to be deleted.
+
+git clean -n
+
+git add setup.sh (for record purposes)
+
+git clean -n
+
+git clean -n -d → preview directories
+
+git clean -f -d
+
+ls
+
+ls -R
+
+exit
