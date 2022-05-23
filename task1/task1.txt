@@ -1,3 +1,3 @@
 1. creating file with nano in practice repo
 2. changing file content to add and commit changes
-
+3. final change, ready for final commit
