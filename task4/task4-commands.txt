@@ -1,0 +1,42 @@
+TASK4 — COMMANDS
+
+asciinema rec ff-merge.cast
+
+source setup.sh
+
+git branch
+
+git branch feature/uppercase
+
+git checkout feature/uppercase
+
+git status → "on branch feature/uppercase", same files as in main because we created our new branch based on main (its state and the files it was pointing to is reflected in feature/uppercase).
+
+nano greeting.txt:
+"HELLO WORLD"
+save file and exit
+
+git add greeting.txt
+
+git commit -m "all-caps greeting" greeting.txt
+
+git branch → feature/uppercase shown first because it is ahead of main ("By default, the branches and their commits are shown in reverse chronological order." — based on git documentation).
+
+git log --oneline --graph --all → feature/uppercase is shown as HEAD
+
+git checkout main
+
+cat greeting.txt → lowercase "hello".
+
+git diff main..feature/uppercase
+
+git merge feature/uppercase
+
+cat greeting.txt → implemented uppercase through git merge.
+
+git branch -d feature/uppercase
+
+git branch → no more feature/uppercase.
+
+exit
+
