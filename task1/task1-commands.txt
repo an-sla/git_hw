@@ -1,0 +1,55 @@
+TASK1 COMMANDS: 
+
+asciinema rec basic-commits.cast
+
+git status
+
+git log / git cherry -v main
+
+nano task1.txt
+
+1. creating file with nano in practice repo
+
+save file, exit
+
+git status → this is red because changes are not saved
+
+git add "task1.txt"
+
+git status → now it is green because changes are saved
+
+git commit -m "task1 — v1" "task1.txt" → committing changes to local repo
+
+git status
+
+nano task1.txt
+
+2. changing file content to add and commit changes
+
+save file, exit
+
+git status → file changed, red = changes unsaved again
+
+git add "task1.txt" → now it is green because changes are saved
+
+git commit -m "task1 - v2" "task1.txt" → committing changes to local repo
+
+nano task1.txt
+
+3. final change, ready for final commit  
+
+save file, exit
+
+git status
+
+git add "task1.txt"
+
+git commit -m "task1 - v3" "task1.txt"
+
+git status
+
+git log → we can see 3 new commits corresponding to v1, v2, v3 of the task1.txt file
+
+git log --oneline --graph
+
+exit
