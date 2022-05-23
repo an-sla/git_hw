@@ -1,0 +1,16 @@
+TASK13 — COMMANDS:
+
+asciinema rec reorder-the-history.cast
+
+source setup.sh
+
+git log --oneline --graph
+→ files are in wrong order
+
+git reflog
+
+git rebase -i d87b61c
+
+git log --oneline --graph
+
+exit
