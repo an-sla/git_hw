@@ -1,0 +1,39 @@
+TASK16 — COMMANDS:
+
+git add task16-commands.txt setup.sh
+
+asciinema rec basic-stashing.cast
+
+source setup.sh
+
+git status
+
+git status -s
+
+git log --oneline --graph
+
+git diff
+
+git stash
+
+nano bug.txt
+
+git add bug.txt
+
+git commit -m 'bug.txt — typos fixed'
+
+git stash apply
+
+git status
+
+git reset --hard HEAD
+
+git stash apply --index
+
+git status
+
+git log --oneline --graph --all
+
+git add --all
+
+exit
