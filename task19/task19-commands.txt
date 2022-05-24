@@ -1,0 +1,31 @@
+TASK19 — COMMANDS:
+
+asciinema rec git-tag.cast
+
+source setup.sh
+
+git tag
+
+git tag -n
+
+echo 'dummy addition 3, user commit' >> dummy.txt
+
+git status
+
+git add dummy.txt
+
+git commit -m 'adding to dummy — 3.0'
+
+git tag -a dummy3.0 -m 'dummy user text' <commit>
+
+git log --oneline
+
+git tag dummy_new <old commit>
+
+git log --oneline
+
+Tag message: don't worry, be happy
+
+git tag -d v0.0
+
+exit
