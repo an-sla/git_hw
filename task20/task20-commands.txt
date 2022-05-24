@@ -1,0 +1,27 @@
+TASK20 — COMMANDS:
+
+asciinema rec commit-on-wrong-branch.cast
+
+source setup.sh
+
+git log --oneline --graph --all
+
+Want to move "Make quick fix - should be moved to main" to main
+Want to put "add relevant fact" on top of previous commit
+Want to move local head to "Initial Commit"
+
+git checkout main
+
+git rebase quickfix
+
+git branch changes-including-B
+
+git reset --soft HEAD~
+
+git branch -d quickfix
+
+git checkout changes-including-B
+
+git log --oneline --graph --all
+
+exit
