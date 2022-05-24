@@ -20,12 +20,14 @@ git tag -a dummy3.0 -m 'dummy user text' <commit>
 
 git log --oneline
 
+git tag -n
+
 git tag dummy_new <old commit>
 
 git log --oneline
 
 Tag message: don't worry, be happy
 
-git tag -d v0.0
+git tag -d <tag>
 
 exit
