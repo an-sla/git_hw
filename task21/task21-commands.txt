@@ -1,0 +1,25 @@
+TASK21 — COMMANDS:
+
+asciinema rec commit-on-wrong-branch-2.cast
+
+source setup.sh
+
+git checkout new-feature
+
+git log --oneline --graph --all
+
+git cherry-pick
+
+git add myapp.txt
+
+git commit
+
+git log --oneline --graph --all
+
+git checkout main
+
+git reset --hard HEAD~1
+
+git log --oneline --graph --all
+
+exit
