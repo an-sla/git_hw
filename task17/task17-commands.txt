@@ -1,0 +1,41 @@
+TASK17 — COMMANDS:
+
+asciinema rec ignore.cast
+
+source setup.sh
+
+touch foo.s
+
+git status . → displays all files 
+
+echo '*s' > .gitignore
+
+git status . → does not display foo.s
+
+git add file1.txt
+
+git commit -m 'adding file1.txt' file1.txt
+
+echo '*.txt' >> .gitignore
+
+git status . → does not show any text files
+
+echo 'adding to file1.txt' >> file1.txt
+
+git status → file was tracked because it has been added already
+
+touch bar.txt
+
+git status → bar.txt not tracked because it is not added
+
+git rm --cached file1.txt
+
+git status . → shows file1.txt as deleted
+
+touch file2.txt
+
+echo '!file2.txt' >> .gitignore
+
+git status . → shows file2.txt, because it is made an exception
+
+exit
