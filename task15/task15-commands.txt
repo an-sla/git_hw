@@ -1,5 +1,6 @@
 TASK15 — COMMANDS:
 
+
 asciinema rec advanced-rebase-interactive.cast
 
 source setup.sh
@@ -10,21 +11,21 @@ git log --oneline --graph
 
 STEP1:
 Want to squash all documentation changes into one commit:
-git rebase -i --autostash (important secret)
+git rebase -i --autostash <important secret>
 "Add documentation — 3 steps"
 
 STEP2:
 Edit first 3 commits dealing with hello.code:
-git rebase -i --autostash (Initial commit)
+git rebase -i --autostash <Initial commit>
 
 STEP3:
 Remove commit before last, replace with last:
-git rebase -i --autostash (add documentation — 3 steps)
+git rebase -i --autostash <add documentation — 3 steps>
 p - f - p
 
 STEP4:
 Remove separate debug commit:
-git rebase -i --autostash (Initial commit)
+git rebase -i --autostash <Initial commit>
 
 → We shall keep the 'important secret' because it deals with a separate file.
 
