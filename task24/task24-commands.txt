@@ -1,0 +1,15 @@
+TASK24 — COMMANDS:
+
+asciinema rec detached-head.cast
+
+source setup.sh
+
+git status
+
+git log --oneline --graph --all
+
+git branch the-beginning
+
+git switch the-beginning
+
+exit
