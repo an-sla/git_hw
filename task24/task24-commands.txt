@@ -12,4 +12,6 @@ git branch the-beginning
 
 git switch the-beginning
 
+git log --oneline --graph --all
+
 exit
