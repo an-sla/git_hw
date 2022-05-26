@@ -1,0 +1,35 @@
+TASK23 — COMMANDS:
+
+asciinema rec save-my-commit.cast
+
+source setup.sh
+
+git log --oneline --graph --all
+
+ls
+
+git reflog → looking for holygrail.txt
+
+git reset --hard
+
+git log --oneline --graph --all
+
+ls 
+
+git reset --hard initial-commit
+
+git cherry-pick <commit>
+
+git log --oneline --graph --all
+
+ls
+
+git reset --hard initial-commit
+
+git reflog expire --expire-unreachable=now --all
+
+git gc --prune=now
+
+git reset --hard → trying to restore holygrail.txt
+
+exit
